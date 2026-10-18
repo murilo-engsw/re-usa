@@ -53,6 +53,23 @@ A paleta de cores utiliza tons neutros e terrosos:
 - **Playfair Display:** utilizada nos títulos.
 - **Lato:** utilizada nos textos e demais elementos da interface.
 
+## 📁 Estrutura do projeto
+
+```text
+projeto/
+├── curriculos/
+│   ├── akira/
+│   ├── murilo/
+│   └── rafael/
+├── styles/
+│   ├── form.css
+│   └── principal.css
+├── index.html
+├── login.html
+├── principal.html
+└── style.css
+```
+
 ## 🌐 Acesse o projeto
 
 Confira o ReUsa em funcionamento:

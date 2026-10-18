@@ -72,7 +72,7 @@ projeto/
 
 ## 🌐 Acesse o projeto
 
-Confira o ReUsa em funcionamento:
+Confira o ReUsa em funcionamento: https://murilo-engsw.github.io/re-usa/
 
 ## 👥 Integrantes
 

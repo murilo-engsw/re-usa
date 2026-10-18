@@ -1,0 +1,308 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  display: block;
+  padding: 0;
+}
+
+.cabecalho {
+  background-color: var(--branco);
+  padding: 20px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  border-bottom: 1px solid var(--creme);
+}
+
+.logo {
+  color: var(--marrom);
+  font-size: 28px;
+}
+
+.menu-navegacao ul,
+.navegacao-rodape ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.menu-navegacao a,
+.navegacao-rodape a {
+  color: var(--marrom);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.menu-navegacao a:hover,
+.navegacao-rodape a:hover {
+  color: var(--marrom-claro);
+}
+
+.link-explorar,
+.botao-explore {
+  display: inline-block;
+  background-color: var(--marrom);
+  color: var(--branco);
+  padding: 12px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.link-explorar:hover,
+.botao-explore:hover {
+  background-color: var(--marrom-claro);
+}
+
+.conteudo-principal {
+  width: 100%;
+}
+
+.titulo-apresentacao,
+.titulo-secao,
+.titulo-sustentabilidade {
+  font-family: var(--fonte-titulo);
+}
+
+.apresentacao {
+  background-color: var(--creme);
+  padding: 60px 8%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+
+.titulo-apresentacao {
+  max-width: 700px;
+  font-size: 36px;
+  line-height: 1.3;
+}
+
+.texto-apresentacao {
+  max-width: 650px;
+  line-height: 1.7;
+}
+
+.figura-apresentacao {
+  width: 100%;
+  max-width: 700px;
+}
+
+.figura-apresentacao img {
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.legenda-apresentacao {
+  margin-top: 8px;
+  font-size: 14px;
+  color: var(--marrom-claro);
+}
+
+.secao-categorias {
+  padding: 60px 8%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+}
+
+.titulo-secao {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.cartao-categoria {
+  background-color: var(--branco);
+  border: 1px solid var(--creme);
+  border-radius: 10px;
+  padding: 15px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.cartao-categoria:hover {
+  transform: translateY(-4px);
+}
+
+.figura-categoria img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.nome-categoria {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.descricao-categoria {
+  margin: 12px 0;
+  line-height: 1.6;
+}
+
+.link-categoria {
+  display: inline-block;
+  color: var(--marrom-claro);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.link-categoria:hover {
+  text-decoration: underline;
+}
+
+.secao-sobre {
+  background-color: var(--branco);
+  padding: 60px 8%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.etapa-funcionamento {
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  background-color: var(--creme);
+  border-radius: 8px;
+}
+
+.titulo-etapa {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.titulo-etapa i {
+  color: var(--marrom-claro);
+}
+
+.descricao-etapa {
+  line-height: 1.6;
+}
+
+.titulo-sustentabilidade {
+  margin-top: 25px;
+  text-align: center;
+  font-size: 26px;
+}
+
+.texto-sustentabilidade {
+  max-width: 700px;
+  text-align: center;
+  line-height: 1.7;
+}
+
+.rodape {
+  background-color: var(--marrom);
+  color: var(--branco);
+  padding: 30px 8%;
+  text-align: center;
+}
+
+.texto-rodape {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.navegacao-rodape ul {
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.navegacao-rodape a {
+  color: var(--branco);
+}
+
+.navegacao-rodape a:hover {
+  color: var(--creme);
+}
+
+.navegacao-integrantes ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.navegacao-integrantes a {
+  color: var(--branco);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.navegacao-integrantes a:hover {
+  color: var(--creme);
+  text-decoration: underline;
+}
+
+.direitos-autorais {
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .cabecalho {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .menu-navegacao ul {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .titulo-apresentacao {
+    font-size: 28px;
+  }
+
+  .secao-categorias {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .secao-categorias {
+    grid-template-columns: 1fr;
+  }
+
+  .secao-categorias,
+  .secao-sobre,
+  .apresentacao {
+    padding: 40px 6%;
+  }
+
+  .titulo-secao {
+    font-size: 24px;
+  }
+
+  .titulo-sustentabilidade {
+    font-size: 22px;
+  }
+
+  .navegacao-rodape ul {
+    gap: 15px;
+  }
+}

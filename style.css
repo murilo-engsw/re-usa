@@ -1,0 +1,31 @@
+@import url("styles/form.css");
+@import url("styles/principal.css");
+
+:root{
+    --branco: #ffffff;
+    --creme: #F5F0E8;
+    --marrom: #4B2E2B;
+    --marrom-claro: #795548;
+    --fonte-principal: "Lato", sans-serif;
+    --fonte-titulo: "Playfair Display", serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fonte-principal);
+  background-color: var(--creme);
+  color: var(--marrom);
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+}

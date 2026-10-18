@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro - ReUsa</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <h1 class="titulo">Cadastro - ReUsa</h1>
+
+    <form action="login.html" method="get">
+      <label class="rotulo" for="nome">Nome completo:</label><br />
+      <input class="campo" type="text" id="nome" name="nome" required /><br />
+
+      <label class="rotulo" for="idade">Idade:</label><br />
+      <input
+        class="campo"
+        type="number"
+        id="idade"
+        name="idade"
+        min="16"
+        required
+      /><br />
+
+      <label class="rotulo" for="cpf">CPF:</label><br />
+      <input
+        class="campo"
+        type="number"
+        id="cpf"
+        name="cpf"
+        placeholder="Insira apenas os números"
+        required
+      /><br />
+
+      <label class="rotulo" for="email">E-mail:</label><br />
+      <input
+        class="campo"
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Insira um e-mail válido"
+        required
+      /><br />
+
+      <label class="rotulo" for="senha">Senha:</label><br />
+      <input
+        class="campo"
+        type="password"
+        id="senha"
+        name="senha"
+        required
+      /><br />
+
+      <br />
+      <input type="submit" value="Enviar" />
+    </form>
+  </body>
+</html>

@@ -1,0 +1,145 @@
+/* Seletor por elemento */
+body {
+    font-family: "Roboto", Arial, sans-serif;
+    background-color: #f2f4f7;
+    color: #222222;
+    margin: 0;
+    padding: 0;
+}
+
+/* Seletor por elemento */
+header {
+    background-color: #1f3c88;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+/* Segunda fonte */
+h1,
+h2 {
+    font-family: "Roboto Slab", Georgia, serif;
+}
+
+/* Seletor por classe */
+.material-icons-outlined {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+/* Seletor por ID */
+#sobre {
+    border-left: 5px solid #1f3c88;
+}
+
+/* Seletor por elemento */
+nav {
+    background-color: #162447;
+    text-align: center;
+    padding: 15px;
+}
+
+/* Links */
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 8px;
+}
+
+/* Pseudo-classe */
+nav a:hover {
+    color: #ffd166;
+    text-decoration: underline;
+}
+
+/* Seletor por atributo */
+a[href^="mailto"] {
+    color: #1f3c88;
+    font-weight: bold;
+}
+
+/* Pseudo-classe */
+a[href^="mailto"]:hover {
+    color: #d62828;
+}
+
+/* Seletor por elemento */
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* Seletor por elemento */
+section {
+    background-color: white;
+    margin-bottom: 25px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Seletor por ID */
+#formacao {
+    border-top: 4px solid #1f3c88;
+}
+
+/* Seletor por ID */
+#hobbies {
+    border-top: 4px solid #162447;
+}
+
+/* Estilo de fonte em negrito */
+h2 {
+    color: #1f3c88;
+    font-weight: 700;
+}
+
+/* Estilo de fonte itálico */
+header p {
+    font-style: italic;
+}
+
+/* Decoração de texto */
+h1 {
+    text-decoration: underline;
+}
+
+/* Lista */
+ul {
+    padding-left: 25px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* Imagens */
+figure {
+    text-align: center;
+}
+
+figure img {
+    border-radius: 10px;
+}
+
+figcaption {
+    font-style: italic;
+    margin-top: 8px;
+}
+
+/* Rodapé */
+footer {
+    background-color: #162447;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* Pseudo-classe */
+section:hover {
+    transform: scale(1.01);
+    transition: 0.2s;
+}
+

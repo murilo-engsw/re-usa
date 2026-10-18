@@ -1,0 +1,224 @@
+:root {
+  --cor--primaria: #000000;
+  --cor--secundaria: #F6F6F6;
+  --cor--terciaria: #22D4FD;
+  --cor--hover: #272727;
+  --cor--borda: #272727;
+
+  --fonte--primaria: 'Krona One', sans-serif;
+  --fonte--secundaria: 'Montserrat', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--cor--primaria);
+  color: var(--cor--secundaria);
+  font-family: var(--fonte--secundaria);
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--fonte--primaria);
+  font-weight: 400;
+  color: var(--cor--secundaria);
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: var(--cor--terciaria);
+  margin: 0 0 1.25rem;
+}
+
+h3 {
+  font-size: 1.1rem;
+}
+
+p {
+  margin: 0 0 0.75rem;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+footer {
+  text-align: center;
+  padding: 24px;
+  font-size: 1rem;
+  color: var(--cor--primaria);
+  background-color: var(--cor--terciaria);
+}
+
+footer p {
+  margin: 0;
+}
+
+a {
+  color: var(--cor--terciaria);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--cor--secundaria);
+}
+
+a[target="_blank"] {
+  text-decoration: underline dotted;
+  text-underline-offset: 3px;
+}
+
+a[href^="mailto:"] {
+  font-weight: 700;
+}
+
+/* ---------- Cabeçalho ---------- */
+#cv-header {
+  background-color: var(--cor--primaria);
+  color: var(--cor--secundaria);
+  padding: 3rem 1.5rem 2.5rem;
+  text-align: center;
+  border-bottom: 2px solid var(--cor--terciaria);
+}
+
+#cv-header h1 {
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
+  line-height: 1.3;
+  color: var(--cor--secundaria);
+  text-decoration: underline;
+  text-decoration-color: var(--cor--terciaria);
+  text-underline-offset: 8px;
+}
+
+#cv-header a {
+  color: var(--cor--terciaria);
+}
+
+#cv-header a:hover {
+  color: var(--cor--secundaria);
+}
+
+.profile-photo {
+  margin: 1.5rem auto 0;
+}
+
+.profile-photo img {
+  width: 220px;
+  height: 293px;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 16px;
+  display: block;
+  margin: 0 auto 0.6rem;
+}
+
+.profile-photo figcaption {
+  font-style: italic;
+  color: var(--cor--secundaria);
+}
+
+.contact-list {
+  margin-top: 1.5rem;
+}
+
+.contact-list li {
+  margin: 0.5rem 0;
+}
+
+.material-symbols-outlined {
+  color: var(--cor--terciaria);
+  vertical-align: middle;
+}
+
+/* ---------- Seções ---------- */
+.block {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem;
+  border-bottom: 1px solid var(--cor--borda);
+}
+
+.lede {
+  font-style: italic;
+}
+
+#ods figure {
+  display: inline-block;
+  margin: 0;
+  padding: 1rem;
+  border: 2px solid var(--cor--terciaria);
+  border-radius: 8px;
+  text-align: center;
+}
+
+#ods figcaption {
+  margin-top: 0.5rem;
+  font-weight: 600;
+}
+
+/* Habilidades */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.skills li {
+  font-style: oblique;
+  font-weight: 600;
+  border: 2px solid var(--cor--terciaria);
+  color: var(--cor--secundaria);
+  padding: 0.35rem 1.1rem;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.skills li:hover {
+  background-color: var(--cor--hover);
+}
+
+/* Educação */
+.edu-item {
+  margin-bottom: 1.5rem;
+}
+
+.edu-item h3 {
+  margin: 0 0 0.3rem;
+}
+
+.edu-item p {
+  margin: 0;
+}
+
+/* Listas simples */
+.plain-list li {
+  margin-bottom: 0.5rem;
+  padding-left: 1.25rem;
+  position: relative;
+}
+
+.plain-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--cor--terciaria);
+}
+
+@media (max-width: 560px) {
+  body {
+    font-size: 1rem;
+  }
+
+  .block {
+    padding: 1.75rem 1.25rem;
+  }
+}

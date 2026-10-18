@@ -1,0 +1,37 @@
+body {
+  background-color: #f8f7f4;
+  font-family: "Inter", sans-serif;
+  color: #1f2933;
+}
+
+.titulo {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: #172b4d;
+}
+
+dt {
+  font-weight: 600;
+}
+
+dd {
+  font-style: italic;
+}
+
+a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #7c3aed;
+  text-decoration: underline;
+}
+
+a[target="_blank"] {
+  font-weight: 500;
+}
+
+#rodape {
+  color: #52606d;
+}

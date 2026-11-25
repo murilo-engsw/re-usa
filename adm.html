@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adm - ReUsa</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles/adm.css">
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+</head>
+<body>
+    <header class="cabecalho">
+      <h1 class="logo">ReUsa</h1>
+
+      <nav class="menu-navegacao">
+        <ul class="lista-navegacao">
+          <li><a href="principal.html#inicio">Início</a></li>
+          <li><a href="principal.html#categorias">Categorias</a></li>
+          <li><a href="principal.html#sobre">Sobre nós</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="painel-adm">
+        <h2 class="titulo-secao">Cadastro de Usuários</h2>
+
+        <form id="form-cadastro">
+            <label class="rotulo" for="campo-nome">Nome:</label>
+            <input class="campo" type="text" id="campo-nome" name="nome" required>
+
+            <label class="rotulo" for="campo-email">E-mail:</label>
+            <input class="campo" type="email" id="campo-email" name="email" required>
+
+            <button class="botao" type="submit" id="btn-cadastrar">Cadastrar</button>
+            <button class="botao botao-secundario" type="button" id="btn-limpar">Limpar</button>
+        </form>
+
+        <label class="rotulo" for="campo-pesquisa">Pesquisar</label>
+        <input class="campo" type="search" id="campo-pesquisa" placeholder="Buscar por nome ou e-mail">
+
+        <button class="botao" type="button" id="btn-excluir-todos">Excluir todos</button>
+
+        <ul id="lista-usuarios"></ul>
+    </main>
+
+    <footer class="rodape">
+      <p class="texto-rodape">
+        <i class="material-icons-outlined">eco</i>
+        ReUsa — Consumo consciente, futuro sustentável.
+      </p>
+
+      <nav class="navegacao-rodape">
+        <ul class="lista-rodape">
+          <li><a href="principal.html#inicio">Início</a></li>
+          <li><a href="principal.html#categorias">Categorias</a></li>
+          <li><a href="principal.html#sobre">Sobre nós</a></li>
+          <li><a href="adm.html">Adm</a></li>
+        </ul>
+      </nav>
+
+      <nav class="navegacao-integrantes">
+        <ul class="lista-integrantes">
+          <li><a href="curriculos/murilo/cur-murilo.html" target="_blank">Murilo Silva</a></li>
+          <li><a href="curriculos/akira/cur-akira.html" target="_blank">Matheus Akira</a></li>
+          <li><a href="curriculos/rafael/cur-rafael.html" target="_blank">Rafael Henrique</a></li>
+        </ul>
+      </nav>
+
+      <p class="direitos-autorais">
+        &copy; 2026 ReUsa. Projeto acadêmico de Programação Web Front-end.
+      </p>
+    </footer>
+
+    <script src="js/adm.js"></script>
+</body>
+</html>

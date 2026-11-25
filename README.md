@@ -26,12 +26,54 @@ O site apresenta cinco categorias principais:
 
 Cada categoria apresenta uma imagem, uma breve descrição e um link para uma plataforma relacionada.
 
+## 🛠️ Área administrativa (Projeto 2)
+
+Na segunda etapa da disciplina, o site ganhou a página **Adm** (`adm.html`), acessada pelo item "Adm" no menu da página principal. Nela é possível gerenciar o cadastro de usuários da aplicação, com os dados salvos no próprio navegador por meio do **Local Storage**.
+
+Funcionalidades:
+
+- **Cadastrar:** o formulário recebe nome e e-mail; cada cadastro aparece em uma lista logo abaixo do formulário, com a data de envio, o nome e o e-mail.
+- **Limpar:** esvazia os campos do formulário.
+- **Excluir um usuário:** cada item da lista tem um botão "Excluir", que pede confirmação e remove o usuário da lista e do Local Storage.
+- **Excluir todos:** pede confirmação e remove todos os usuários da lista e do Local Storage.
+- **Pesquisar:** filtra a lista enquanto o usuário digita, mostrando apenas os itens cujo nome ou e-mail contém o termo buscado (sem diferenciar maiúsculas de minúsculas).
+
+### Como os dados são armazenados
+
+Todos os cadastros ficam em **uma única chave** do Local Storage, `reusa-usuarios`, que guarda um array em formato JSON:
+
+```json
+[
+  {
+    "id": 1764095400000,
+    "data": "25/11/2026, 15:10:00",
+    "nome": "Ana Souza",
+    "email": "ana@email.com"
+  }
+]
+```
+
+O `id` é gerado com `Date.now()` e serve para identificar qual usuário excluir, mesmo quando a lista está filtrada pela pesquisa.
+
+### Organização do código (`js/adm.js`)
+
+| Função / evento | Responsabilidade |
+|---|---|
+| `carregar()` | Lê a chave do Local Storage e converte o JSON em array (`JSON.parse`). |
+| `salvar(usuarios)` | Converte o array em JSON (`JSON.stringify`) e grava na chave. |
+| `renderizar(usuarios)` | Recria a lista `<ul>` com a API DOM (`createElement`, `appendChild`), incluindo o botão "Excluir" de cada item. |
+| `filtrar(usuarios)` | Aplica o termo da pesquisa sobre nome e e-mail. |
+| `excluirItem(id)` | Confirma com o usuário e remove o item pelo `id`. |
+| Evento `submit` do formulário | Monta o objeto do novo usuário, salva e atualiza a lista. |
+| Eventos dos botões e da pesquisa | Limpar campos, excluir todos e pesquisar em tempo real. |
+
 ## 🖥️ Tecnologias utilizadas
 
 O projeto foi desenvolvido utilizando tecnologias fundamentais para a criação de páginas web:
 
 - **HTML5:** estruturação semântica e organização do conteúdo.
 - **CSS3:** estilização dos elementos, definição da identidade visual e responsividade.
+- **JavaScript (puro):** manipulação da página com a **API DOM** e armazenamento local com a **API Web Storage** (Local Storage), sem bibliotecas ou frameworks.
 - **Google Fonts:** utilização das fontes Lato e Playfair Display.
 - **Material Icons:** inclusão de ícones para aprimorar a comunicação visual.
 
@@ -61,9 +103,13 @@ projeto/
 │   ├── akira/
 │   ├── murilo/
 │   └── rafael/
+├── js/
+│   └── adm.js
 ├── styles/
+│   ├── adm.css
 │   ├── form.css
 │   └── principal.css
+├── adm.html
 ├── index.html
 ├── login.html
 ├── principal.html
@@ -72,7 +118,9 @@ projeto/
 
 ## 🌐 Acesse o projeto
 
-Confira o ReUsa em funcionamento: https://murilo-engsw.github.io/re-usa/
+- Página de entrada (cadastro e login): https://murilo-engsw.github.io/re-usa/
+- Página principal: https://murilo-engsw.github.io/re-usa/principal.html
+- Área administrativa: https://murilo-engsw.github.io/re-usa/adm.html
 
 ## 👥 Integrantes
 
@@ -82,6 +130,9 @@ Confira o ReUsa em funcionamento: https://murilo-engsw.github.io/re-usa/
 
 ## 📚 Contexto acadêmico
 
-Projeto desenvolvido como atividade acadêmica da disciplina de **Programação Web Front-end**, com foco na aplicação de HTML e CSS na construção de uma página web informativa.
+Projeto desenvolvido como atividade acadêmica da disciplina de **Programação Web Front-end**, em duas etapas:
+
+- **Projeto 1 (HTML e CSS):** construção do layout e das páginas informativas do site.
+- **Projeto 2 (JavaScript):** criação da área administrativa, com informações geradas dinamicamente pela API DOM e armazenadas no navegador com a API Web Storage.
 
 O trabalho busca demonstrar como uma interface simples pode contribuir para a divulgação de alternativas sustentáveis e para a conscientização sobre o consumo responsável.
